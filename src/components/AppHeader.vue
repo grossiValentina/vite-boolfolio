@@ -7,6 +7,16 @@ export default {
 
     data() {
         return {
+            links: [
+                {
+                    name: 'home',
+                    title: 'Home',
+                },
+                {
+                    name: 'about',
+                    title: 'Chi siamo',
+                }
+            ]
 
         }
     },
@@ -17,8 +27,9 @@ export default {
 <template>
     <nav class="navbar navbar-light bg-light">
         <form class="container-fluid justify-content-start">
-            <router-link :to="{name:'home'}" class="btn btn-outline-success me-2" type="button">Home</router-link>
-            <router-link :to="{name:'about'}" class="btn btn-outline-success me-2" type="button">About</router-link>
+            <div v-for="link in links" :key="link.titolo" >
+                <router-link :to="{name:link.name}" class="btn btn-outline-success me-2" type="button">{{ link.title }}</router-link>
+            </div>
         </form>
     </nav>
 </template>

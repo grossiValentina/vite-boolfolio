@@ -15,7 +15,7 @@ export default {
 </script>
 
 <template>
-    <h1>about page</h1>
+    <h3 class="text-center p-3">about page</h3>
 </template>
 
 <style lang="scss" scoped></style>
